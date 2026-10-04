@@ -1,810 +1,2501 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Scruffy Butt Digital Designs is a creative digital design business bringing personality, imagination, and a little attitude." />
-    <title>Scruffy Butt Digital Designs | Creative Digital Design</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a href="index.html" class="brand" aria-label="Scruffy Butt Digital Designs home">
-          <span class="brand-logo">
-            <img src="logo.png" alt="Scruffy Butt Digital Designs logo" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+  name="description"
+  content="Scruffy Butt Digital Designs — creative digital products, guides, resources and designs with personality and attitude."
+>
+
+<title>Scruffy Butt Digital Designs</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+  rel="stylesheet"
+>
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+/* ==================================================
+   SCRUFFY BUTT DIGITAL SHOP
+================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.digital-shop {
+  padding: 80px 20px;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #46142f 0%,
+      #180811 32%,
+      #080306 65%,
+      #020102 100%
+    );
+
+  color: white;
+}
+
+.shop-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.shop-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.shop-heading .eyebrow {
+  color: #ff69b4;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+}
+
+.shop-heading h2 {
+  font-size: clamp(34px, 6vw, 60px);
+  margin: 10px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ff4fa8,
+      #ffd36b,
+      #ff75ba
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.shop-heading p {
+  max-width: 760px;
+  margin: auto;
+
+  color: #e2d6dd;
+  font-size: 17px;
+}
+
+
+/* SEARCH */
+
+.shop-search-wrap {
+  max-width: 650px;
+  margin: 30px auto 22px;
+}
+
+.shop-search {
+  width: 100%;
+
+  padding: 16px 20px;
+
+  border-radius: 50px;
+
+  border: 2px solid #c88b38;
+
+  background: #10070d;
+
+  color: white;
+
+  font-size: 16px;
+
+  outline: none;
+
+  box-shadow:
+    0 0 12px rgba(255, 76, 166, .25);
+}
+
+.shop-search:focus {
+  border-color: #ff55a8;
+
+  box-shadow:
+    0 0 15px rgba(255, 76, 166, .6);
+}
+
+.shop-search::placeholder {
+  color: #bbaab3;
+}
+
+
+/* CATEGORY BUTTONS */
+
+.shop-filters {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 40px;
+}
+
+.shop-filter {
+  border: 1px solid #ff5aaa;
+
+  background: #160912;
+
+  color: white;
+
+  padding: 10px 15px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  transition: .25s;
+}
+
+.shop-filter:hover,
+.shop-filter.active {
+  background:
+    linear-gradient(
+      135deg,
+      #e92180,
+      #ff67b2,
+      #c68a35
+    );
+
+  border-color: #ffd36b;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 12px rgba(255, 72, 162, .7);
+}
+
+
+/* RESULTS */
+
+.shop-results {
+  text-align: center;
+
+  color: #d8c6d0;
+
+  margin: -20px 0 30px;
+
+  font-weight: 600;
+}
+
+
+/* PRODUCT GRID */
+
+.shop-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 28px;
+}
+
+
+/* CARD */
+
+.shop-card {
+  padding: 3px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ff3d9c,
+      #ffd36b,
+      #ff65b3,
+      #9f6826
+    );
+
+  transition: .3s;
+
+  box-shadow:
+    0 0 12px rgba(255, 61, 156, .3);
+}
+
+.shop-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 0 22px rgba(255, 61, 156, .7),
+    0 0 35px rgba(255, 210, 90, .25);
+}
+
+.shop-card-inner {
+  height: 100%;
+
+  border-radius: 21px;
+
+  padding: 17px;
+
+  background:
+    linear-gradient(
+      155deg,
+      #25101c,
+      #090507 60%,
+      #020102
+    );
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* FAUX BOOK COVER */
+
+.shop-cover {
+  height: 280px;
+
+  border-radius: 16px;
+
+  border: 2px solid #dba044;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #57183c,
+      #1c0914 50%,
+      #050304 100%
+    );
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 25px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow:
+    inset 0 0 35px rgba(255, 80, 165, .16),
+    0 0 14px rgba(255, 76, 164, .4);
+}
+
+.shop-cover::before {
+  content: "✦";
+
+  position: absolute;
+
+  top: 13px;
+
+  left: 17px;
+
+  color: #ffd36b;
+
+  font-size: 20px;
+}
+
+.shop-cover::after {
+  content: "✦";
+
+  position: absolute;
+
+  bottom: 13px;
+
+  right: 17px;
+
+  color: #ff5bab;
+
+  font-size: 20px;
+}
+
+.cover-icon {
+  font-size: 52px;
+
+  margin-bottom: 14px;
+
+  filter:
+    drop-shadow(
+      0 0 8px rgba(255, 90, 180, .7)
+    );
+}
+
+.cover-title {
+  font-family: Georgia, serif;
+
+  font-size: 21px;
+
+  font-weight: bold;
+
+  line-height: 1.25;
+
+  color: white;
+}
+
+.cover-brand {
+  margin-top: 18px;
+
+  color: #ffd36b;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* PRODUCT INFORMATION */
+
+.shop-info {
+  padding: 18px 4px 3px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex-grow: 1;
+}
+
+.shop-category {
+  align-self: center;
+
+  border: 1px solid #ff5aaa;
+
+  border-radius: 30px;
+
+  color: #ffabd3;
+
+  padding: 5px 11px;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+}
+
+.shop-info h3 {
+  font-family: Georgia, serif;
+
+  text-align: center;
+
+  font-size: 20px;
+
+  line-height: 1.3;
+
+  margin: 0;
+
+  color: white;
+}
+
+.shop-sparkle {
+  text-align: center;
+
+  color: #ff64af;
+
+  letter-spacing: 7px;
+
+  margin: 10px 0;
+
+  text-shadow:
+    0 0 7px #ff419c;
+}
+
+.shop-info p {
+  color: #d9cfd5;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  flex-grow: 1;
+
+  margin-bottom: 15px;
+}
+
+
+/* PRICE */
+
+.product-price {
+  text-align: center;
+
+  font-family: Georgia, serif;
+
+  font-size: 32px;
+
+  font-weight: 900;
+
+  color: #ffd36b;
+
+  margin: 7px 0 18px;
+
+  text-shadow:
+    0 0 8px rgba(255, 211, 107, .75),
+    0 0 15px rgba(255, 79, 168, .45);
+}
+
+
+/* BUY BUTTON */
+
+.shop-buy {
+  display: block;
+
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border-radius: 50px;
+
+  border: 1px solid #ffd36b;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #df1978,
+      #ff65b0 55%,
+      #c4862e
+    );
+
+  transition: .25s;
+
+  box-shadow:
+    0 0 10px rgba(255, 65, 158, .45);
+}
+
+.shop-buy:hover {
+  transform: scale(1.03);
+
+  box-shadow:
+    0 0 16px #ff459e,
+    0 0 25px rgba(255, 210, 90, .4);
+}
+
+
+/* PHONE */
+
+@media(max-width: 600px) {
+
+  .digital-shop {
+    padding: 55px 14px;
+  }
+
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-card {
+    max-width: 390px;
+
+    width: 100%;
+
+    margin: auto;
+  }
+
+  .shop-filter {
+    font-size: 11px;
+
+    padding: 8px 10px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================================================
+     HEADER
+================================================ -->
+
+<header class="site-header">
+
+<div class="container nav-wrap">
+
+<a
+href="index.html"
+class="brand"
+aria-label="Scruffy Butt Digital Designs home">
+
+<span class="brand-logo">
+
+<img
+src="logo.png"
+alt="Scruffy Butt Digital Designs logo">
+
+</span>
+
+<span class="brand-name">
+Scruffy Butt Digital Designs
+</span>
+
+</a>
+
+
+<nav
+class="main-nav"
+aria-label="Main navigation">
+
+<a href="#catalog">
+Catalog
+</a>
+
+<a href="#digital-links">
+Digital Shop
+</a>
+
+<a href="#features">
+Features
+</a>
+
+<a href="#pricing">
+Services
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+</nav>
+
+
+<div class="nav-actions">
+
+<a
+href="#digital-links"
+class="btn btn-primary">
+
+Shop Digital
+
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- SLOGAN -->
+
+<div class="slogan-banner">
+
+<p class="slogan-text">
+
+🐾 Put Some Scruff on Your Stuff 🐾
+
+</p>
+
+</div>
+
+
+<main id="home">
+
+
+<!-- ================================================
+     HERO
+================================================ -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+
+<div class="hero-copy">
+
+<div
+class="brand-crest"
+aria-label="Scruffy Butt Digital Designs logo">
+
+<img
+src="logo.png"
+alt="Scruffy Butt Digital Designs logo">
+
+</div>
+
+
+<span class="eyebrow">
+Creative Digital Design with Attitude
+</span>
+
+
+<h1>
+Scruffy Butt Digital Designs
+</h1>
+
+
+<p>
+
+Creative digital products, guides and designs
+with personality, imagination and a little attitude.
+
+Explore resources for business, money, AI,
+marketing, lifestyle, personal growth and more.
+
+</p>
+
+
+<div class="hero-actions">
+
+<a
+href="#digital-links"
+class="btn btn-primary large">
+
+Browse Digital Products
+
+</a>
+
+
+<a
+href="#catalog"
+class="btn btn-secondary large">
+
+Explore Designs
+
+</a>
+
+</div>
+
+
+<ul
+class="trust-list"
+aria-label="Shop features">
+
+<li>
+Digital products
+</li>
+
+<li>
+Multiple categories
+</li>
+
+<li>
+Direct product access
+</li>
+
+</ul>
+
+</div>
+
+
+<div
+class="hero-visual"
+aria-label="Scruffy Butt Digital Designs preview">
+
+<div class="dashboard-card main-card">
+
+<div class="card-header">
+
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+
+</div>
+
+
+<div class="stat-row">
+
+<div>
+
+<p>
+Scruffy Butt
+</p>
+
+<strong>
+Digital Collection
+</strong>
+
+</div>
+
+<div class="trend up">
+🐾
+</div>
+
+</div>
+
+
+<div class="mini-grid">
+
+<div class="mini-card accent">
+
+<span>
+Explore
+</span>
+
+<strong>
+Digital Guides
+</strong>
+
+</div>
+
+
+<div class="mini-card">
+
+<span>
+Discover
+</span>
+
+<strong>
+Creative Resources
+</strong>
+
+</div>
+
+
+<div class="mini-card wide">
+
+<span>
+Our Style
+</span>
+
+<strong>
+Bold • Fun • Creative
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="floating-badge badge-one">
+
+<span>
+Digital
+</span>
+
+<strong>
+Products
+</strong>
+
+</div>
+
+
+<div class="floating-badge badge-two">
+
+<span>
+Scruffy
+</span>
+
+<strong>
+🐾 With Attitude
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================================================
+     BRAND STRIP
+================================================ -->
+
+<section class="partners">
+
+<div
+class="container partner-row"
+aria-label="Scruffy Butt brand values">
+
+<span>
+Creative
+</span>
+
+<span>
+Digital
+</span>
+
+<span>
+Original
+</span>
+
+<span>
+Bold
+</span>
+
+<span>
+Scruffy
+</span>
+
+</div>
+
+</section>
+
+
+<!-- ================================================
+     EXISTING DESIGN CATALOG
+================================================ -->
+
+<section
+id="catalog"
+class="catalog section-spacing">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<span class="eyebrow">
+Explore Our Designs
+</span>
+
+<h2>
+Unique digital designs with personality and attitude.
+</h2>
+
+</div>
+
+
+<div
+class="filter-bar"
+aria-label="Product categories">
+
+<button
+class="filter-btn active"
+data-filter="all">
+
+All
+
+</button>
+
+<button
+class="filter-btn"
+data-filter="templates">
+
+Templates
+
+</button>
+
+<button
+class="filter-btn"
+data-filter="media">
+
+Illustrations
+
+</button>
+
+<button
+class="filter-btn"
+data-filter="marketing">
+
+Branding
+
+</button>
+
+<button
+class="filter-btn"
+data-filter="sites">
+
+Web Design
+
+</button>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<article
+class="product-card"
+data-category="templates">
+
+<a
+href="product-1.html"
+class="product-thumb-link">
+
+<div class="product-thumb thumb-one"></div>
+
+</a>
+
+<div class="product-body">
+
+<div class="meta-row">
+
+<span class="tag">
+Templates
+</span>
+
+</div>
+
+<h3>
+Logo Design Pack
+</h3>
+
+<p>
+Creative logo templates for building
+a memorable digital brand.
+</p>
+
+<div class="product-footer">
+
+<a
+href="product-1.html"
+class="btn btn-small btn-primary">
+
+View
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<article
+class="product-card"
+data-category="media">
+
+<a
+href="product-2.html"
+class="product-thumb-link">
+
+<div class="product-thumb thumb-two"></div>
+
+</a>
+
+<div class="product-body">
+
+<div class="meta-row">
+
+<span class="tag">
+Illustrations
+</span>
+
+</div>
+
+<h3>
+Character Illustration Bundle
+</h3>
+
+<p>
+Colorful character illustrations
+for creative projects.
+</p>
+
+<div class="product-footer">
+
+<a
+href="product-2.html"
+class="btn btn-small btn-primary">
+
+View
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<article
+class="product-card"
+data-category="marketing">
+
+<a
+href="product-3.html"
+class="product-thumb-link">
+
+<div class="product-thumb thumb-three"></div>
+
+</a>
+
+<div class="product-body">
+
+<div class="meta-row">
+
+<span class="tag">
+Branding
+</span>
+
+</div>
+
+<h3>
+Brand Identity Kit
+</h3>
+
+<p>
+Creative branding resources for
+developing your visual identity.
+</p>
+
+<div class="product-footer">
+
+<a
+href="product-3.html"
+class="btn btn-small btn-primary">
+
+View
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+<article
+class="product-card"
+data-category="sites">
+
+<a
+href="product-4.html"
+class="product-thumb-link">
+
+<div class="product-thumb thumb-four"></div>
+
+</a>
+
+<div class="product-body">
+
+<div class="meta-row">
+
+<span class="tag">
+Web Design
+</span>
+
+</div>
+
+<h3>
+Website Design
+</h3>
+
+<p>
+Creative website designs built
+to showcase personality.
+</p>
+
+<div class="product-footer">
+
+<a
+href="product-4.html"
+class="btn btn-small btn-primary">
+
+View
+
+</a>
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================================================
+     DIGITAL SHOP
+================================================ -->
+
+<section
+id="digital-links"
+class="digital-shop">
+
+<div class="shop-container">
+
+
+<div class="shop-heading">
+
+<span class="eyebrow">
+
+🐾 Scruffy Butt Digital Library
+
+</span>
+
+<h2>
+Find Your Next Digital Guide
+</h2>
+
+<p>
+
+Browse our collection of digital guides covering
+AI, money, business, marketing, personal growth,
+home, lifestyle, wellness and more.
+
+</p>
+
+</div>
+
+
+<div class="shop-search-wrap">
+
+<input
+type="search"
+id="shopSearch"
+class="shop-search"
+placeholder="🔎 Search digital products..."
+aria-label="Search digital products">
+
+</div>
+
+
+<div class="shop-filters">
+
+<button
+class="shop-filter active"
+data-shop-filter="all">
+
+🐾 All
+
+</button>
+
+<button
+class="shop-filter"
+data-shop-filter="ai">
+
+🤖 AI & Automation
+
+</button>
+
+<button
+class="shop-filter"
+data-shop-filter="money">
+
+💰 Money & Crypto
+
+</button>
+
+<button
+class="shop-filter"
+data-shop-filter="marketing">
+
+📣 Marketing
+
+</button>
+
+<button
+class="shop-filter"
+data-shop-filter="business">
+
+💼 Business
+
+</button>
+
+<button
+class="shop-filter"
+data-shop-filter="growth">
+
+💖 Personal Growth
+
+</button>
+
+<button
+class="shop-filter"
+data-shop-filter="home">
+
+🏡 Home & Lifestyle
+
+</button>
+
+<button
+class="shop-filter"
+data-shop-filter="wellness">
+
+🧘 Wellness
+
+</button>
+
+<button
+class="shop-filter"
+data-shop-filter="style">
+
+👗 Style
+
+</button>
+
+</div>
+
+
+<div
+id="shopResults"
+class="shop-results">
+</div>
+
+
+<div
+id="shopGrid"
+class="shop-grid">
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================================================
+     FEATURES
+================================================ -->
+
+<section
+id="features"
+class="features section-spacing">
+
+<div class="container">
+
+
+<div class="section-heading narrow">
+
+<span class="eyebrow">
+Why Scruffy Butt?
+</span>
+
+<h2>
+Digital creativity with personality.
+</h2>
+
+</div>
+
+
+<div class="feature-grid">
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+✨
+</div>
+
+<h3>
+Creative Variety
+</h3>
+
+<p>
+Explore digital resources across
+multiple topics and interests.
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+🐾
+</div>
+
+<h3>
+Scruffy Style
+</h3>
+
+<p>
+A playful brand built around creativity,
+personality and attitude.
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+⚡
+</div>
+
+<h3>
+Easy Access
+</h3>
+
+<p>
+Choose a product and go directly
+to its sales page.
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<div class="feature-icon">
+💖
+</div>
+
+<h3>
+Easy Browsing
+</h3>
+
+<p>
+Search and filter categories to
+quickly find what interests you.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================================================
+     PROMO
+================================================ -->
+
+<section class="promo-strip">
+
+<div class="container promo-inner">
+
+<div>
+
+<span class="eyebrow light">
+Ready to explore?
+</span>
+
+<h2>
+Find a digital guide that fits your next goal.
+</h2>
+
+</div>
+
+
+<a
+href="#digital-links"
+class="btn btn-light">
+
+Shop Digital Products
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================================================
+     SERVICES
+================================================ -->
+
+<section
+id="pricing"
+class="pricing section-spacing">
+
+<div class="container">
+
+<div class="section-heading narrow">
+
+<span class="eyebrow">
+Creative Services
+</span>
+
+<h2>
+Bring your digital ideas to life.
+</h2>
+
+</div>
+
+
+<div class="pricing-grid">
+
+
+<div class="pricing-card">
+
+<span class="plan">
+Digital Design
+</span>
+
+<h3>
+Custom
+</h3>
+
+<ul>
+
+<li>
+Creative digital concepts
+</li>
+
+<li>
+Personalized design direction
+</li>
+
+<li>
+Digital-ready files
+</li>
+
+<li>
+Creative branding options
+</li>
+
+</ul>
+
+<a
+href="#contact"
+class="btn btn-secondary full">
+
+Contact Us
+
+</a>
+
+</div>
+
+
+<div class="pricing-card featured-plan">
+
+<span class="plan">
+Digital Products
+</span>
+
+<h3>
+$29
+</h3>
+
+<ul>
+
+<li>
+Digital guides
+</li>
+
+<li>
+Business resources
+</li>
+
+<li>
+Lifestyle resources
+</li>
+
+<li>
+Multiple categories
+</li>
+
+</ul>
+
+<a
+href="#digital-links"
+class="btn btn-primary full">
+
+Browse Products
+
+</a>
+
+</div>
+
+
+<div class="pricing-card">
+
+<span class="plan">
+Brand Design
+</span>
+
+<h3>
+Creative
+</h3>
+
+<ul>
+
+<li>
+Logo concepts
+</li>
+
+<li>
+Brand identity ideas
+</li>
+
+<li>
+Digital graphics
+</li>
+
+<li>
+Custom creative work
+</li>
+
+</ul>
+
+<a
+href="#contact"
+class="btn btn-secondary full">
+
+Contact Us
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- ================================================
+     FOOTER
+================================================ -->
+
+<footer
+id="contact"
+class="site-footer">
+
+<div class="container footer-grid">
+
+
+<div>
+
+<a
+href="index.html"
+class="brand"
+aria-label="Scruffy Butt Digital Designs home">
+
+<span class="brand-logo brand-logo-small">
+
+<img
+src="logo.png"
+alt="Scruffy Butt Digital Designs logo">
+
+</span>
+
+<span class="brand-name">
+Scruffy Butt Digital Designs
+</span>
+
+</a>
+
+<p>
+
+Creative digital designs, products and resources
+with personality, imagination and attitude.
+
+</p>
+
+</div>
+
+
+<div>
+
+<h4>
+Explore
+</h4>
+
+<ul>
+
+<li>
+<a href="#catalog">
+Designs
+</a>
+</li>
+
+<li>
+<a href="#digital-links">
+Digital Products
+</a>
+</li>
+
+<li>
+<a href="#features">
+About
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>
+Categories
+</h4>
+
+<ul>
+
+<li>
+<a href="#digital-links">
+Business
+</a>
+</li>
+
+<li>
+<a href="#digital-links">
+Money
+</a>
+</li>
+
+<li>
+<a href="#digital-links">
+Lifestyle
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h4>
+Scruffy Butt
+</h4>
+
+<ul>
+
+<li>
+<a href="#digital-links">
+Shop
+</a>
+</li>
+
+<li>
+<a href="#pricing">
+Creative Services
+</a>
+</li>
+
+<li>
+<a href="#contact">
+Contact
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+
+<div class="container footer-bottom">
+
+<span>
+© 2026 Scruffy Butt Digital Designs
+</span>
+
+<span>
+🐾 Put Some Scruff on Your Stuff
+</span>
+
+</div>
+
+</footer>
+
+
+<!-- ================================================
+     ORIGINAL WEBSITE JAVASCRIPT
+================================================ -->
+
+<script src="script.js"></script>
+
+
+<!-- ================================================
+     DIGITAL SHOP DATABASE
+================================================ -->
+
+<script>
+
+const scruffyProducts = [
+
+/* AI */
+
+{
+title:"AI Tools for Business Automation",
+url:"https://clickcloneprofits.app/s/tFvb-5FCg3",
+category:"ai",
+label:"AI & Automation",
+icon:"🤖",
+description:"Explore AI tools and automation strategies for modern business workflows."
+},
+
+{
+title:"Mastering AI for Trendy Content Creation",
+url:"https://clickcloneprofits.app/s/yG1GyrHN1g",
+category:"ai",
+label:"AI & Content",
+icon:"✨",
+description:"Explore AI-powered approaches for creating modern digital content."
+},
+
+{
+title:"Faceless YouTube Automation",
+url:"https://clickcloneprofits.app/s/RxN4zH2gf9",
+category:"ai",
+label:"YouTube Automation",
+icon:"▶️",
+description:"Explore strategies for developing and managing faceless YouTube content."
+},
+
+
+/* MONEY */
+
+{
+title:"Budgeting for Financial Freedom",
+url:"https://clickcloneprofits.app/s/N2B-eCdwrk",
+category:"money",
+label:"Budgeting",
+icon:"💵",
+description:"Explore practical budgeting habits for taking greater control of your money."
+},
+
+{
+title:"Crypto Fundamentals",
+url:"https://clickcloneprofits.app/s/fNbpSIb8X_",
+category:"money",
+label:"Crypto",
+icon:"₿",
+description:"An introductory guide to cryptocurrency concepts and terminology."
+},
+
+{
+title:"The Side Hustle Blueprint",
+url:"https://clickcloneprofits.app/s/I4xPwm7QqQ",
+category:"money",
+label:"Side Hustles",
+icon:"💰",
+description:"Explore strategies for developing and organizing a side hustle."
+},
+
+{
+title:"Investing Your First $10K",
+url:"https://clickcloneprofits.app/s/oC8qMIFh_I",
+category:"money",
+label:"Investing",
+icon:"📈",
+description:"Explore investing concepts and strategies for your first major milestone."
+},
+
+{
+title:"Debt Freedom in 12 Months",
+url:"https://clickcloneprofits.app/s/NW4x1m6zeo",
+category:"money",
+label:"Debt",
+icon:"💳",
+description:"Explore an organized approach to setting and tracking debt-reduction goals."
+},
+
+{
+title:"Amazon KDP Passive Income",
+url:"https://clickcloneprofits.app/s/PfiD0048Z2",
+category:"money",
+label:"Publishing",
+icon:"📚",
+description:"Explore digital publishing and the Amazon KDP business model."
+},
+
+{
+title:"Etsy Digital Products Empire",
+url:"https://clickcloneprofits.app/s/2xZUdT0yVK",
+category:"money",
+label:"Digital Products",
+icon:"🛍️",
+description:"Explore the process of developing a digital-product business for Etsy."
+},
+
+{
+title:"The Complete Guide to Recognizing Where You Spend Money & How to Budget",
+url:"https://clickcloneprofits.app/s/JAlUnab-SO",
+category:"money",
+label:"Budgeting",
+icon:"🧾",
+description:"Take a closer look at spending habits and learn how to build a practical budget."
+},
+
+{
+title:"How to Save $100,000 in Your 30s & Retire by 65",
+url:"https://clickcloneprofits.app/s/S3yD9rWl7A",
+category:"money",
+label:"Savings",
+icon:"🏦",
+description:"Explore long-term savings goals and retirement-focused financial planning."
+},
+
+{
+title:"The Psychology in Trading Crypto & the Tricks to Making Money",
+url:"https://clickcloneprofits.app/s/Jybxt2C0tp",
+category:"money",
+label:"Crypto Psychology",
+icon:"🧠",
+description:"Explore trading psychology and emotional discipline in crypto markets."
+},
+
+{
+title:"Mastering Crypto Trading Psychology for Resilience",
+url:"https://clickcloneprofits.app/s/Hkq8IznYDK",
+category:"money",
+label:"Trading Mindset",
+icon:"📊",
+description:"Develop a stronger mindset for navigating the emotional side of crypto trading."
+},
+
+
+/* MARKETING */
+
+{
+title:"Content Marketing Playbook",
+url:"https://clickcloneprofits.app/s/R06sbWRr5E",
+category:"marketing",
+label:"Content Marketing",
+icon:"📣",
+description:"Explore strategies for creating and promoting digital content."
+},
+
+{
+title:"Facebook Ads on a Budget",
+url:"https://clickcloneprofits.app/s/bhWrnAjepj",
+category:"marketing",
+label:"Facebook Ads",
+icon:"📘",
+description:"Explore Facebook advertising approaches while working with a smaller budget."
+},
+
+{
+title:"SEO Simplified",
+url:"https://clickcloneprofits.app/s/w9Mq7rPQgf",
+category:"marketing",
+label:"SEO",
+icon:"🔎",
+description:"Learn the basics behind improving the visibility of online content."
+},
+
+{
+title:"Email Marketing That Converts",
+url:"https://clickcloneprofits.app/s/ldRN1Qx-GE",
+category:"marketing",
+label:"Email Marketing",
+icon:"📧",
+description:"Explore strategies for creating stronger email marketing campaigns."
+},
+
+{
+title:"Instagram Growth Blueprint",
+url:"https://clickcloneprofits.app/s/_m4QeJD7wy",
+category:"marketing",
+label:"Instagram",
+icon:"📱",
+description:"Explore strategies for developing and growing an Instagram presence."
+},
+
+{
+title:"Social Media Manager Startup",
+url:"https://clickcloneprofits.app/s/4rUt3vdXoZ",
+category:"marketing",
+label:"Social Media",
+icon:"💬",
+description:"Explore the basics of starting a social-media-management business."
+},
+
+
+/* BUSINESS */
+
+{
+title:"Digital Tools for a Smarter Better Life!",
+url:"https://clickcloneprofits.app/s/HDn4PpoR5c",
+category:"business",
+label:"Digital Tools",
+icon:"💻",
+description:"Explore digital tools designed to help simplify everyday life and work."
+},
+
+{
+title:"Project Management Simplified",
+url:"https://clickcloneprofits.app/s/CI7seHTd1o",
+category:"business",
+label:"Project Management",
+icon:"📋",
+description:"A simplified introduction to planning and managing projects."
+},
+
+{
+title:"Solopreneur Launch Blueprint",
+url:"https://clickcloneprofits.app/s/rznMBgtCWd",
+category:"business",
+label:"Entrepreneurship",
+icon:"🚀",
+description:"Explore the steps involved in developing your own solo business."
+},
+
+{
+title:"Time Blocking for Peak Performance",
+url:"https://clickcloneprofits.app/s/XTOYP1fnwF",
+category:"business",
+label:"Productivity",
+icon:"⏰",
+description:"Learn how to organize your schedule through focused blocks of time."
+},
+
+{
+title:"Remote Work Mastery",
+url:"https://clickcloneprofits.app/s/JiXled8v4m",
+category:"business",
+label:"Remote Work",
+icon:"🏠",
+description:"Explore habits and strategies for productive remote work."
+},
+
+{
+title:"Freelance Writing Fast Track",
+url:"https://clickcloneprofits.app/s/aFmCJcAGlb",
+category:"business",
+label:"Freelancing",
+icon:"✍️",
+description:"Explore the basics of developing a freelance writing path."
+},
+
+{
+title:"Fearless Public Speaking",
+url:"https://clickcloneprofits.app/s/Q49qnzNfeC",
+category:"business",
+label:"Public Speaking",
+icon:"🎤",
+description:"Explore ways to build confidence and strengthen your public-speaking skills."
+},
+
+{
+title:"Memory & Learning Accelerator",
+url:"https://clickcloneprofits.app/s/GZ0lUCEW2d",
+category:"business",
+label:"Learning",
+icon:"🧠",
+description:"Explore techniques for strengthening learning and memory habits."
+},
+/* PERSONAL GROWTH */
+
+{
+title:"The Gratitude Transformation",
+url:"https://clickcloneprofits.app/s/Xvy5phQWbs",
+category:"growth",
+label:"Gratitude",
+icon:"💖",
+description:"Explore gratitude practices and intentional personal reflection."
+},
+
+{
+title:"Journaling for Self-Discovery",
+url:"https://clickcloneprofits.app/s/P5LQxB1wXQ",
+category:"growth",
+label:"Self Discovery",
+icon:"📔",
+description:"Use journaling as a tool for reflection and understanding yourself."
+},
+
+{
+title:"Manifestation Methods That Work",
+url:"https://clickcloneprofits.app/s/K_nZTJ7U9m",
+category:"growth",
+label:"Manifestation",
+icon:"✨",
+description:"Explore manifestation practices focused on goals and intentional thinking."
+},
+
+{
+title:"The Introvert's Social Playbook",
+url:"https://clickcloneprofits.app/s/AbNRLYl6t7",
+category:"growth",
+label:"Social Confidence",
+icon:"🌸",
+description:"Explore practical approaches to social situations and communication."
+},
+
+{
+title:"Rebuilding Trust After Betrayal",
+url:"https://clickcloneprofits.app/s/v8xn8K-JgO",
+category:"growth",
+label:"Relationships",
+icon:"💔",
+description:"Explore reflection and communication after trust has been damaged."
+},
+
+{
+title:"Boundaries That Heal",
+url:"https://clickcloneprofits.app/s/EsGxE3tGO9",
+category:"growth",
+label:"Boundaries",
+icon:"🩷",
+description:"Explore healthier boundaries and stronger personal relationships."
+},
+
+{
+title:"Dating Confidence After 40",
+url:"https://clickcloneprofits.app/s/VkCCFjUN_Q",
+category:"growth",
+label:"Dating",
+icon:"💕",
+description:"Explore confidence and self-assurance while navigating dating after 40."
+},
+
+{
+title:"Communication Blueprint for Couples",
+url:"https://clickcloneprofits.app/s/Kzv1Rbebhb",
+category:"growth",
+label:"Couples",
+icon:"💑",
+description:"Explore communication strategies for stronger connections between partners."
+},
+
+{
+title:"The Confidence Blueprint",
+url:"https://clickcloneprofits.app/s/mT2Qgmy0nL",
+category:"growth",
+label:"Confidence",
+icon:"⭐",
+description:"Explore practical ways to strengthen confidence and self-belief."
+},
+
+
+/* HOME & LIFESTYLE */
+
+{
+title:"Urban Container Gardening",
+url:"https://clickcloneprofits.app/s/5WAxPT3qOa",
+category:"home",
+label:"Gardening",
+icon:"🌱",
+description:"Explore container gardening for homes with limited outdoor space."
+},
+
+{
+title:"Minimalist Home Organization",
+url:"https://clickcloneprofits.app/s/9J00LHI2dQ",
+category:"home",
+label:"Organization",
+icon:"🏡",
+description:"Explore simpler approaches to organizing and decluttering your home."
+},
+
+{
+title:"Natural DIY Cleaning Products",
+url:"https://clickcloneprofits.app/s/rmTESC6Uu_",
+category:"home",
+label:"DIY Home",
+icon:"🧽",
+description:"Explore ideas for making household cleaning products at home."
+},
+
+{
+title:"Meal Prep Mastery",
+url:"https://clickcloneprofits.app/s/_Q7l00-qz4",
+category:"home",
+label:"Meal Prep",
+icon:"🍱",
+description:"Build a more organized approach to planning and preparing meals."
+},
+
+{
+title:"Digital Detox & Deep Focus",
+url:"https://clickcloneprofits.app/s/9sfCNSnxaB",
+category:"home",
+label:"Digital Wellness",
+icon:"📵",
+description:"Explore healthier technology habits and strategies for focused time."
+},
+
+{
+title:"The 5AM Morning Mastery",
+url:"https://clickcloneprofits.app/s/VbAsI3ji88",
+category:"home",
+label:"Morning Routine",
+icon:"🌅",
+description:"Explore routines for building a more intentional start to your day."
+},
+
+
+/* WELLNESS */
+
+{
+title:"Chakra Healing Fundamentals",
+url:"https://clickcloneprofits.app/s/UmrJXc4EqR",
+category:"wellness",
+label:"Holistic Wellness",
+icon:"🌈",
+description:"Explore introductory chakra concepts and related wellness practices."
+},
+
+{
+title:"Meditation for the Modern Mind",
+url:"https://clickcloneprofits.app/s/8mfT1hYNG1",
+category:"wellness",
+label:"Mindfulness",
+icon:"🧘",
+description:"Explore meditation practices designed for busy modern lifestyles."
+},
+
+{
+title:"Yoga for Chronic Pain Relief",
+url:"https://clickcloneprofits.app/s/bW07y2pEN6",
+category:"wellness",
+label:"Yoga",
+icon:"🧘‍♀️",
+description:"Explore gentle yoga-focused approaches to movement and wellness."
+},
+
+{
+title:"Couch to 5K Running Guide",
+url:"https://clickcloneprofits.app/s/Gx5ypS3xyH",
+category:"wellness",
+label:"Running",
+icon:"🏃",
+description:"A beginner-focused guide for building toward a 5K running goal."
+},
+
+{
+title:"Intermittent Fasting Decoded",
+url:"https://clickcloneprofits.app/s/uG3w89DJty",
+category:"wellness",
+label:"Nutrition",
+icon:"🥗",
+description:"An informational introduction to intermittent fasting concepts."
+},
+
+{
+title:"Home Workout Revolution",
+url:"https://clickcloneprofits.app/s/LwngraQ6mx",
+category:"wellness",
+label:"Fitness",
+icon:"🏋️",
+description:"Explore ways to build a fitness routine from home."
+},
+
+{
+title:"Keto Lifestyle Jumpstart",
+url:"https://clickcloneprofits.app/s/OwwPDOntWf",
+category:"wellness",
+label:"Keto",
+icon:"🥑",
+description:"An introductory guide to the keto lifestyle and its common approaches."
+},
+
+{
+title:"The Anti-Inflammatory Lifestyle",
+url:"https://clickcloneprofits.app/s/cFME75Iuvh",
+category:"wellness",
+label:"Wellness",
+icon:"🌿",
+description:"Explore lifestyle ideas associated with an anti-inflammatory approach."
+},
+
+{
+title:"Natural Anxiety Relief",
+url:"https://clickcloneprofits.app/s/6hMxLzGMGz",
+category:"wellness",
+label:"Relaxation",
+icon:"🌷",
+description:"Explore general relaxation and wellness practices for everyday stress."
+},
+
+{
+title:"Hormone Balance for Women Over 40",
+url:"https://clickcloneprofits.app/s/geHobHkq_2",
+category:"wellness",
+label:"Women's Wellness",
+icon:"🌺",
+description:"An informational lifestyle guide focused on wellness after 40."
+},
+
+{
+title:"Sleep Optimization Blueprint",
+url:"https://clickcloneprofits.app/s/i4QFQ7JJlT",
+category:"wellness",
+label:"Sleep",
+icon:"🌙",
+description:"Explore habits and routines associated with healthier sleep practices."
+},
+
+{
+title:"The Gut Health Reset",
+url:"https://clickcloneprofits.app/s/DDQnAf4hA5",
+category:"wellness",
+label:"Gut Wellness",
+icon:"🌿",
+description:"An informational lifestyle guide focused on everyday digestive wellness."
+},
+
+
+/* STYLE */
+
+{
+title:"The Capsule Wardrobe Guide",
+url:"https://clickcloneprofits.app/s/kwoEPwsnG8",
+category:"style",
+label:"Style",
+icon:"👗",
+description:"Explore a simpler, more intentional approach to building and organizing your wardrobe."
+}
+
+];
+
+
+/* ================================================
+   SHOP SETUP
+================================================ */
+
+const shopGrid =
+document.getElementById("shopGrid");
+
+const shopSearch =
+document.getElementById("shopSearch");
+
+const shopResults =
+document.getElementById("shopResults");
+
+let activeCategory = "all";
+
+
+/* ================================================
+   RENDER PRODUCT CARDS
+================================================ */
+
+function renderShop() {
+
+  const searchText =
+    shopSearch.value
+      .toLowerCase()
+      .trim();
+
+
+  const filteredProducts =
+    scruffyProducts.filter(product => {
+
+      const matchesCategory =
+        activeCategory === "all" ||
+        product.category === activeCategory;
+
+
+      const matchesSearch =
+        product.title
+          .toLowerCase()
+          .includes(searchText) ||
+
+        product.label
+          .toLowerCase()
+          .includes(searchText) ||
+
+        product.description
+          .toLowerCase()
+          .includes(searchText);
+
+
+      return (
+        matchesCategory &&
+        matchesSearch
+      );
+
+    });
+
+
+  shopGrid.innerHTML = "";
+
+
+  shopResults.textContent =
+    `${filteredProducts.length} digital product${filteredProducts.length === 1 ? "" : "s"} found`;
+
+
+  filteredProducts.forEach(product => {
+
+    const card =
+      document.createElement("article");
+
+
+    card.className =
+      "shop-card";
+
+
+    card.innerHTML = `
+
+      <div class="shop-card-inner">
+
+
+        <!-- FAUX DIGITAL BOOK COVER -->
+
+        <div class="shop-cover">
+
+          <div class="cover-icon">
+            ${product.icon}
+          </div>
+
+
+          <div class="cover-title">
+            ${product.title}
+          </div>
+
+
+          <div class="cover-brand">
+            Scruffy Butt Digital Designs
+          </div>
+
+        </div>
+
+
+        <!-- PRODUCT INFORMATION -->
+
+        <div class="shop-info">
+
+
+          <span class="shop-category">
+            ${product.label}
           </span>
-          <span class="brand-name">Scruffy Butt Designs</span>
-        </a>
 
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="#catalog">Catalog</a>
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#reviews">Reviews</a>
-          <a href="#digital-links">Digital Media</a>
-          <a href="#contact">Contact</a>
-        </nav>
 
-        <div class="nav-actions">
-          <button class="btn btn-ghost">Log in</button>
-          <button class="btn btn-primary">Start selling</button>
-        </div>
-      </div>
-    </header>
+          <h3>
+            ${product.title}
+          </h3>
 
-    <div class="slogan-banner">
-      <p class="slogan-text">Put some scruff on your stuff</p>
-    </div>
 
-    <main id="home">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <div class="brand-crest" aria-label="Scruffy Butt Digital Designs logo">
-              <img src="logo.png" alt="Scruffy Butt Digital Designs logo" />
-            </div>
-
-            <span class="eyebrow">Creative Digital Design with Attitude</span>
-            <h1>Scruffy Butt Digital Designs</h1>
-            <p>
-              Bringing personality, imagination, and a little attitude to every digital design project.
-              Premium creative assets, templates, and design services that make your brand stand out.
-            </p>
-
-            <div class="hero-actions">
-              <a href="#catalog" class="btn btn-primary large">Browse marketplace</a>
-              <a href="#pricing" class="btn btn-secondary large">Commission Work</a>
-            </div>
-
-            <ul class="trust-list" aria-label="Marketplace trust points">
-              <li>5k+ designs created</li>
-              <li>4.9/5 customer rating</li>
-              <li>Global clientele</li>
-            </ul>
+          <div class="shop-sparkle">
+            ✦ ♥ ✦
           </div>
 
-          <div class="hero-visual" aria-label="Marketplace preview">
-            <div class="dashboard-card main-card">
-              <div class="card-header">
-                <span class="dot dot-red"></span>
-                <span class="dot dot-yellow"></span>
-                <span class="dot dot-green"></span>
-              </div>
 
-              <div class="stat-row">
-                <div>
-                  <p>Projects Completed</p>
-                  <strong>5,240</strong>
-                </div>
-                <div class="trend up">+18.2%</div>
-              </div>
+          <p>
+            ${product.description}
+          </p>
 
-              <div class="mini-grid">
-                <div class="mini-card accent">
-                  <span>Top Product</span>
-                  <strong>Logo Design Pack</strong>
-                </div>
-                <div class="mini-card">
-                  <span>Happy Clients</span>
-                  <strong>2.1k</strong>
-                </div>
-                <div class="mini-card wide">
-                  <span>Specialty</span>
-                  <strong>Branding & Illustration</strong>
-                </div>
-              </div>
-            </div>
 
-            <div class="floating-badge badge-one">
-              <span>New</span>
-              <strong>Mascot Design Kit</strong>
-            </div>
+          <!-- PRODUCT PRICE -->
 
-            <div class="floating-badge badge-two">
-              <span>Popular</span>
-              <strong>⭐ 5 Stars</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="partners">
-        <div class="container partner-row" aria-label="Partner brands">
-          <span>Creative Studio</span>
-          <span>Design Hub</span>
-          <span>Artistry Co</span>
-          <span>Digital Boutique</span>
-          <span>Brand Lab</span>
-        </div>
-      </section>
-
-      <section id="catalog" class="catalog section-spacing">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Explore our designs</span>
-            <h2>Unique digital designs with personality and attitude.</h2>
+          <div class="product-price">
+            $29.00
           </div>
 
-          <div class="filter-bar" aria-label="Product categories">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="templates">Templates</button>
-            <button class="filter-btn" data-filter="media">Illustrations</button>
-            <button class="filter-btn" data-filter="marketing">Branding</button>
-            <button class="filter-btn" data-filter="sites">Web Design</button>
-          </div>
 
-          <div class="product-grid">
-            <article class="product-card" data-category="templates">
-              <a href="product-1.html" class="product-thumb-link" aria-label="View Logo Design Pack product details">
-                <div class="product-thumb thumb-one"></div>
-              </a>
-              <div class="product-body">
-                <div class="meta-row">
-                  <span class="tag">Templates</span>
-                  <span class="rating">⭐⭐⭐⭐⭐ 4.9</span>
-                </div>
-                <a href="product-1.html" class="product-title-link" aria-label="Open Logo Design Pack product page">
-                  <h3>Logo Design Pack</h3>
-                </a>
-                <p>Premium logo templates with editable files for personal and commercial use.</p>
-                <div class="product-footer">
-                  <strong>$49</strong>
-                  <a href="product-1.html" class="btn btn-small btn-primary">Buy now</a>
-                </div>
-              </div>
-            </article>
+          <!-- BUY BUTTON -->
 
-            <article class="product-card" data-category="media">
-              <a href="product-2.html" class="product-thumb-link" aria-label="View Character Illustration Bundle product details">
-                <div class="product-thumb thumb-two"></div>
-              </a>
-              <div class="product-body">
-                <div class="meta-row">
-                  <span class="tag">Illustrations</span>
-                  <span class="rating">⭐⭐⭐⭐⭐ 4.8</span>
-                </div>
-                <a href="product-2.html" class="product-title-link" aria-label="Open Character Illustration Bundle product page">
-                  <h3>Character Illustration Bundle</h3>
-                </a>
-                <p>Quirky and colorful character illustrations perfect for branding and storytelling.</p>
-                <div class="product-footer">
-                  <strong>$36</strong>
-                  <a href="product-2.html" class="btn btn-small btn-primary">Buy now</a>
-                </div>
-              </div>
-            </article>
+          <a
+            class="shop-buy"
+            href="${product.url}"
+            target="_blank"
+            rel="noopener noreferrer">
 
-            <article class="product-card" data-category="marketing">
-              <a href="product-3.html" class="product-thumb-link" aria-label="View Complete Brand Identity Kit product details">
-                <div class="product-thumb thumb-three"></div>
-              </a>
-              <div class="product-body">
-                <div class="meta-row">
-                  <span class="tag">Branding</span>
-                  <span class="rating">⭐⭐⭐⭐⭐ 5.0</span>
-                </div>
-                <a href="product-3.html" class="product-title-link" aria-label="Open Complete Brand Identity Kit product page">
-                  <h3>Complete Brand Identity Kit</h3>
-                </a>
-                <p>Full branding package including logo, colors, fonts, and brand guidelines.</p>
-                <div class="product-footer">
-                  <strong>$59</strong>
-                  <a href="product-3.html" class="btn btn-small btn-primary">Buy now</a>
-                </div>
-              </div>
-            </article>
+            🐾 BUY NOW
 
-            <article class="product-card" data-category="sites">
-              <a href="product-4.html" class="product-thumb-link" aria-label="View Custom Website Design product details">
-                <div class="product-thumb thumb-four"></div>
-              </a>
-              <div class="product-body">
-                <div class="meta-row">
-                  <span class="tag">Web Design</span>
-                  <span class="rating">⭐⭐⭐⭐⭐ 4.9</span>
-                </div>
-                <a href="product-4.html" class="product-title-link" aria-label="Open Custom Website Design product page">
-                  <h3>Custom Website Design</h3>
-                </a>
-                <p>Eye-catching website designs that convert visitors and showcase personality.</p>
-                <div class="product-footer">
-                  <strong>$89</strong>
-                  <a href="product-4.html" class="btn btn-small btn-primary">Buy now</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card" data-category="templates">
-              <a href="product-1.html" class="product-thumb-link" aria-label="View Social Media Templates product details">
-                <div class="product-thumb thumb-five"></div>
-              </a>
-              <div class="product-body">
-                <div class="meta-row">
-                  <span class="tag">Templates</span>
-                  <span class="rating">⭐⭐⭐⭐⭐ 4.7</span>
-                </div>
-                <a href="product-1.html" class="product-title-link" aria-label="Open Social Media Templates product page">
-                  <h3>Social Media Templates</h3>
-                </a>
-                <p>Trendy social media post templates that bring your brand voice to life.</p>
-                <div class="product-footer">
-                  <strong>$42</strong>
-                  <a href="product-1.html" class="btn btn-small btn-primary">Buy now</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card" data-category="marketing">
-              <a href="product-3.html" class="product-thumb-link" aria-label="View Packaging Design Templates product details">
-                <div class="product-thumb thumb-six"></div>
-              </a>
-              <div class="product-body">
-                <div class="meta-row">
-                  <span class="tag">Branding</span>
-                  <span class="rating">⭐⭐⭐⭐⭐ 4.9</span>
-                </div>
-                <a href="product-3.html" class="product-title-link" aria-label="Open Packaging Design Templates product page">
-                  <h3>Packaging Design Templates</h3>
-                </a>
-                <p>Creative packaging designs that make your products memorable and shareable.</p>
-                <div class="product-footer">
-                  <strong>$27</strong>
-                  <a href="product-3.html" class="btn btn-small btn-primary">Buy now</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="digital-links" class="digital-links section-spacing">
-        <div class="container">
-          <div class="section-heading narrow">
-            <span class="eyebrow">Digital Media Library</span>
-            <h2>Explore all 56 digital product links.</h2>
-          </div>
-
-          <div class="resource-toolbar">
-            <div class="resource-search-wrap">
-              <input id="resource-search" class="resource-search" type="text" placeholder="Search titles or categories..." aria-label="Search digital media titles" />
-            </div>
-            <div class="resource-filters" aria-label="Resource categories">
-              <button class="filter-chip active" data-category="all">All</button>
-              <button class="filter-chip" data-category="business">Business</button>
-              <button class="filter-chip" data-category="finance">Finance</button>
-              <button class="filter-chip" data-category="health">Health</button>
-              <button class="filter-chip" data-category="fitness">Fitness</button>
-              <button class="filter-chip" data-category="home">Home</button>
-              <button class="filter-chip" data-category="productivity">Productivity</button>
-              <button class="filter-chip" data-category="relationships">Relationships</button>
-              <button class="filter-chip" data-category="learning">Learning</button>
-              <button class="filter-chip" data-category="personal-growth">Personal Growth</button>
-              <button class="filter-chip" data-category="lifestyle">Lifestyle</button>
-            </div>
-          </div>
-
-          <div class="resource-grid">
-            <a class="resource-card" href="https://clickcloneprofits.app/s/HDn4PpoR5c" target="_blank" rel="noreferrer" data-category="productivity">
-              <span class="resource-tag">Productivity</span>
-              <span class="resource-title">Digital Tools for a Smarter Better Life!</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/kwoEPwsnG8" target="_blank" rel="noreferrer" data-category="lifestyle">
-              <span class="resource-tag">Lifestyle</span>
-              <span class="resource-title">The Capsule Wardrobe Guide</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/5WAxPT3qOa" target="_blank" rel="noreferrer" data-category="home">
-              <span class="resource-tag">Home</span>
-              <span class="resource-title">Urban Container Gardening</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/9J00LHI2dQ" target="_blank" rel="noreferrer" data-category="home">
-              <span class="resource-tag">Home</span>
-              <span class="resource-title">Minimalist Home Organization</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/Xvy5phQWbs" target="_blank" rel="noreferrer" data-category="personal-growth">
-              <span class="resource-tag">Personal Growth</span>
-              <span class="resource-title">The Gratitude Transformation</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/UmrJXc4EqR" target="_blank" rel="noreferrer" data-category="health">
-              <span class="resource-tag">Health</span>
-              <span class="resource-title">Chakra Healing Fundamentals</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/P5LQxB1wXQ" target="_blank" rel="noreferrer" data-category="personal-growth">
-              <span class="resource-tag">Personal Growth</span>
-              <span class="resource-title">Journaling for Self-Discovery</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/rmTESC6Uu_" target="_blank" rel="noreferrer" data-category="home">
-              <span class="resource-tag">Home</span>
-              <span class="resource-title">Natural DIY Cleaning Products</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/_Q7l00-qz4" target="_blank" rel="noreferrer" data-category="health">
-              <span class="resource-tag">Health</span>
-              <span class="resource-title">Meal Prep Mastery</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/K_nZTJ7U9m" target="_blank" rel="noreferrer" data-category="personal-growth">
-              <span class="resource-tag">Personal Growth</span>
-              <span class="resource-title">Manifestation Methods That Work</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/8mfT1hYNG1" target="_blank" rel="noreferrer" data-category="health">
-              <span class="resource-tag">Health</span>
-              <span class="resource-title">Meditation for the Modern Mind</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/CI7seHTd1o" target="_blank" rel="noreferrer" data-category="productivity">
-              <span class="resource-tag">Productivity</span>
-              <span class="resource-title">Project Management Simplified</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/tFvb-5FCg3" target="_blank" rel="noreferrer" data-category="business">
-              <span class="resource-tag">Business</span>
-              <span class="resource-title">AI Tools for Business Automation</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/rznMBgtCWd" target="_blank" rel="noreferrer" data-category="business">
-              <span class="resource-tag">Business</span>
-              <span class="resource-title">Solopreneur Launch Blueprint</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/XTOYP1fnwF" target="_blank" rel="noreferrer" data-category="productivity">
-              <span class="resource-tag">Productivity</span>
-              <span class="resource-title">Time Blocking for Peak Performance</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/JiXled8v4m" target="_blank" rel="noreferrer" data-category="productivity">
-              <span class="resource-tag">Productivity</span>
-              <span class="resource-title">Remote Work Mastery</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/N2B-eCdwrk" target="_blank" rel="noreferrer" data-category="finance">
-              <span class="resource-tag">Finance</span>
-              <span class="resource-title">Budgeting for Financial Freedom</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/fNbpSIb8X_" target="_blank" rel="noreferrer" data-category="finance">
-              <span class="resource-tag">Finance</span>
-              <span class="resource-title">Crypto Fundamentals</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/I4xPwm7QqQ" target="_blank" rel="noreferrer" data-category="business">
-              <span class="resource-tag">Business</span>
-              <span class="resource-title">The Side Hustle Blueprint</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/oC8qMIFh_I" target="_blank" rel="noreferrer" data-category="finance">
-              <span class="resource-tag">Finance</span>
-              <span class="resource-title">Investing Your First $10K</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/NW4x1m6zeo" target="_blank" rel="noreferrer" data-category="finance">
-              <span class="resource-tag">Finance</span>
-              <span class="resource-title">Debt Freedom in 12 Months</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/R06sbWRr5E" target="_blank" rel="noreferrer" data-category="business">
-              <span class="resource-tag">Business</span>
-              <span class="resource-title">Content Marketing Playbook</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/bhWrnAjepj" target="_blank" rel="noreferrer" data-category="business">
-              <span class="resource-tag">Business</span>
-              <span class="resource-title">Facebook Ads on a Budget</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/w9Mq7rPQgf" target="_blank" rel="noreferrer" data-category="business">
-              <span class="resource-tag">Business</span>
-              <span class="resource-title">SEO Simplified</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/ldRN1Qx-GE" target="_blank" rel="noreferrer" data-category="business">
-              <span class="resource-tag">Business</span>
-              <span class="resource-title">Email Marketing That Converts</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/_m4QeJD7wy" target="_blank" rel="noreferrer" data-category="business">
-              <span class="resource-tag">Business</span>
-              <span class="resource-title">Instagram Growth Blueprint</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/bW07y2pEN6" target="_blank" rel="noreferrer" data-category="fitness">
-              <span class="resource-tag">Fitness</span>
-              <span class="resource-title">Yoga for Chronic Pain Relief</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/Gx5ypS3xyH" target="_blank" rel="noreferrer" data-category="fitness">
-              <span class="resource-tag">Fitness</span>
-              <span class="resource-title">Couch to 5K Running Guide</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/uG3w89DJty" target="_blank" rel="noreferrer" data-category="health">
-              <span class="resource-tag">Health</span>
-              <span class="resource-title">Intermittent Fasting Decoded</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/LwngraQ6mx" target="_blank" rel="noreferrer" data-category="fitness">
-              <span class="resource-tag">Fitness</span>
-              <span class="resource-title">Home Workout Revolution</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/OwwPDOntWf" target="_blank" rel="noreferrer" data-category="health">
-              <span class="resource-tag">Health</span>
-              <span class="resource-title">Keto Lifestyle Jumpstart</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/AbNRLYl6t7" target="_blank" rel="noreferrer" data-category="personal-growth">
-              <span class="resource-tag">Personal Growth</span>
-              <span class="resource-title">The Introvert's Social Playbook</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/v8xn8K-JgO" target="_blank" rel="noreferrer" data-category="relationships">
-              <span class="resource-tag">Relationships</span>
-              <span class="resource-title">Rebuilding Trust After Betrayal</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/EsGxE3tGO9" target="_blank" rel="noreferrer" data-category="relationships">
-              <span class="resource-tag">Relationships</span>
-              <span class="resource-title">Boundaries That Heal</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/VkCCFjUN_Q" target="_blank" rel="noreferrer" data-category="relationships">
-              <span class="resource-tag">Relationships</span>
-              <span class="resource-title">Dating Confidence After 40</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/Kzv1Rbebhb" target="_blank" rel="noreferrer" data-category="relationships">
-              <span class="resource-tag">Relationships</span>
-              <span class="resource-title">Communication Blueprint for Couples</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/9sfCNSnxaB" target="_blank" rel="noreferrer" data-category="productivity">
-              <span class="resource-tag">Productivity</span>
-              <span class="resource-title">Digital Detox &amp; Deep Focus</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/Q49qnzNfeC" target="_blank" rel="noreferrer" data-category="personal-growth">
-              <span class="resource-tag">Personal Growth</span>
-              <span class="resource-title">Fearless Public Speaking</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/GZ0lUCEW2d" target="_blank" rel="noreferrer" data-category="learning">
-              <span class="resource-tag">Learning</span>
-              <span class="resource-title">Memory &amp; Learning Accelerator</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/mT2Qgmy0nL" target="_blank" rel="noreferrer" data-category="personal-growth">
-              <span class="resource-tag">Personal Growth</span>
-              <span class="resource-title">The Confidence Blueprint</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/VbAsI3ji88" target="_blank" rel="noreferrer" data-category="productivity">
-              <span class="resource-tag">Productivity</span>
-              <span class="resource-title">The 5AM Morning Mastery</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/4rUt3vdXoZ" target="_blank" rel="noreferrer" data-category="business">
-              <span class="resource-tag">Business</span>
-              <span class="resource-title">Social Media Manager Startup</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/PfiD0048Z2" target="_blank" rel="noreferrer" data-category="business">
-              <span class="resource-tag">Business</span>
-              <span class="resource-title">Amazon KDP Passive Income</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/RxN4zH2gf9" target="_blank" rel="noreferrer" data-category="business">
-              <span class="resource-tag">Business</span>
-              <span class="resource-title">Faceless YouTube Automation</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/aFmCJcAGlb" target="_blank" rel="noreferrer" data-category="business">
-              <span class="resource-tag">Business</span>
-              <span class="resource-title">Freelance Writing Fast Track</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/2xZUdT0yVK" target="_blank" rel="noreferrer" data-category="business">
-              <span class="resource-tag">Business</span>
-              <span class="resource-title">Etsy Digital Products Empire</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/cFME75Iuvh" target="_blank" rel="noreferrer" data-category="health">
-              <span class="resource-tag">Health</span>
-              <span class="resource-title">The Anti-Inflammatory Lifestyle</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/6hMxLzGMGz" target="_blank" rel="noreferrer" data-category="health">
-              <span class="resource-tag">Health</span>
-              <span class="resource-title">Natural Anxiety Relief</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/geHobHkq_2" target="_blank" rel="noreferrer" data-category="health">
-              <span class="resource-tag">Health</span>
-              <span class="resource-title">Hormone Balance for Women Over 40</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/i4QFQ7JJlT" target="_blank" rel="noreferrer" data-category="health">
-              <span class="resource-tag">Health</span>
-              <span class="resource-title">Sleep Optimization Blueprint</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/DDQnAf4hA5" target="_blank" rel="noreferrer" data-category="health">
-              <span class="resource-tag">Health</span>
-              <span class="resource-title">The Gut Health Reset</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/yG1GyrHN1g" target="_blank" rel="noreferrer" data-category="business">
-              <span class="resource-tag">Business</span>
-              <span class="resource-title">Mastering AI for Trendy Content Creation</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/JAlUnab-SO" target="_blank" rel="noreferrer" data-category="finance">
-              <span class="resource-tag">Finance</span>
-              <span class="resource-title">The Complete A how to guide to recognize where you spend the money and how to budget Blueprint</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/S3yD9rWl7A" target="_blank" rel="noreferrer" data-category="finance">
-              <span class="resource-tag">Finance</span>
-              <span class="resource-title">The Complete How to save up 100000$ when your in your 30s and want to retire by 65 Blueprint</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/Jybxt2C0tp" target="_blank" rel="noreferrer" data-category="finance">
-              <span class="resource-tag">Finance</span>
-              <span class="resource-title">The Complete The psychology in trading crypto and the tricks to making money Blueprint</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-
-            <a class="resource-card" href="https://clickcloneprofits.app/s/Hkq8IznYDK" target="_blank" rel="noreferrer" data-category="finance">
-              <span class="resource-tag">Finance</span>
-              <span class="resource-title">Mastering Crypto Trading Psychology for Resilience</span>
-              <span class="resource-link">Open resource</span>
-            </a>
-          </div>
-
-          <div class="resource-page-link-wrap">
-            <a href="digital-media.html" class="btn btn-primary large">Open full digital media page</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="features" class="features section-spacing">
-        <div class="container">
-          <div class="section-heading narrow">
-            <span class="eyebrow">Why choose Scruffy Butt?</span>
-            <h2>Design with personality and creative flair.</h2>
-          </div>
-
-          <div class="feature-grid">
-            <div class="feature-card">
-              <div class="feature-icon">✨</div>
-              <h3>Creative Vision</h3>
-              <p>Designs that stand out with unique character and memorable style.</p>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-icon">🎨</div>
-              <h3>Fully Customizable</h3>
-              <p>All designs come with editable files for your personal touch.</p>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-icon">⚡</div>
-              <h3>Quick Turnaround</h3>
-              <p>Fast delivery on custom commissions without sacrificing quality.</p>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-icon">💪</div>
-              <h3>Quality Guaranteed</h3>
-              <p>Professional designs that make your brand look amazing and bold.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="promo-strip">
-        <div class="container promo-inner">
-          <div>
-            <span class="eyebrow light">Ready for amazing design?</span>
-            <h2>Let's bring your vision to life with creative designs.</h2>
-          </div>
-          <a href="#catalog" class="btn btn-light">Explore designs</a>
-        </div>
-      </section>
-
-      <section id="pricing" class="pricing section-spacing">
-        <div class="container">
-          <div class="section-heading narrow">
-            <span class="eyebrow">Design Services</span>
-            <h2>Choose the package that fits your needs.</h2>
-          </div>
-
-          <div class="pricing-grid">
-            <div class="pricing-card">
-              <span class="plan">Starter Pack</span>
-              <h3>$99<span>/mo</span></h3>
-              <ul>
-                <li>1 custom design per month</li>
-                <li>Unlimited revisions</li>
-                <li>Quick turnaround</li>
-                <li>Email support</li>
-              </ul>
-              <button class="btn btn-secondary full">Get started</button>
-            </div>
-
-            <div class="pricing-card featured-plan">
-              <span class="plan">Full Branding</span>
-              <h3>$299<span>/mo</span></h3>
-              <ul>
-                <li>Complete brand identity</li>
-                <li>Logo + brand guidelines</li>
-                <li>Social media templates</li>
-                <li>Priority support</li>
-              </ul>
-              <button class="btn btn-primary full">Most popular</button>
-            </div>
-
-            <div class="pricing-card">
-              <span class="plan">Premium Package</span>
-              <h3>$599<span>/mo</span></h3>
-              <ul>
-                <li>Unlimited custom designs</li>
-                <li>Website design included</li>
-                <li>Brand strategy consultation</li>
-                <li>Dedicated designer</li>
-              </ul>
-              <button class="btn btn-secondary full">Talk to us</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="reviews" class="reviews section-spacing">
-        <div class="container">
-          <div class="section-heading narrow">
-            <span class="eyebrow">Client love</span>
-            <h2>What our happy clients say about us.</h2>
-          </div>
-
-          <div class="review-grid">
-            <blockquote class="review-card">
-              “Scruffy Butt Designs brought our brand vision to life with personality and flair. Absolutely love the work!”
-              <footer>
-                <strong>Jessica R.</strong>
-                <span>Small Business Owner</span>
-              </footer>
-            </blockquote>
-
-            <blockquote class="review-card">
-              “Best design investment we made. The team understood our vibe and nailed it on the first round.”
-              <footer>
-                <strong>Alex T.</strong>
-                <span>Creative Director</span>
-              </footer>
-            </blockquote>
-
-            <blockquote class="review-card">
-              “Fresh, creative, and full of personality. Scruffy Butt Designs is the real deal!”
-              <footer>
-                <strong>Sarah M.</strong>
-                <span>Entrepreneur</span>
-              </footer>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer id="contact" class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <a href="index.html" class="brand" aria-label="Scruffy Butt Digital Designs home">
-            <span class="brand-logo brand-logo-small">
-              <img src="logo.png" alt="Scruffy Butt Digital Designs logo" />
-            </span>
-            <span class="brand-name">Scruffy Butt Designs</span>
           </a>
-          <p>Creative digital design bringing personality, imagination, and attitude.</p>
+
+
         </div>
 
-        <div>
-          <h4>Designs</h4>
-          <ul>
-            <li><a href="#catalog">Logo Designs</a></li>
-            <li><a href="#catalog">Illustrations</a></li>
-            <li><a href="#catalog">Branding</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#features">About Us</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#digital-links">Digital Media</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:hello@scruffybutt.designs">hello@scruffybutt.designs</a></li>
-            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
-            <li>Creative Studio</li>
-          </ul>
-        </div>
       </div>
 
-      <div class="container footer-bottom">
-        <span>© 2026 Scruffy Butt Digital Designs</span>
-        <span>Privacy • Terms • Support</span>
-      </div>
-    </footer>
+    `;
 
-    <script src="script.js"></script>
-  </body>
+
+    shopGrid.appendChild(card);
+
+  });
+
+}
+
+
+/* ================================================
+   CATEGORY FILTERS
+================================================ */
+
+document
+  .querySelectorAll(
+    ".shop-filter"
+  )
+  .forEach(button => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        document
+          .querySelectorAll(
+            ".shop-filter"
+          )
+          .forEach(btn => {
+
+            btn.classList.remove(
+              "active"
+            );
+
+          });
+
+
+        button.classList.add(
+          "active"
+        );
+
+
+        activeCategory =
+          button.dataset.shopFilter;
+
+
+        renderShop();
+
+      }
+    );
+
+  });
+
+
+/* ================================================
+   SEARCH
+================================================ */
+
+shopSearch.addEventListener(
+  "input",
+  renderShop
+);
+
+
+/* ================================================
+   LOAD SHOP
+================================================ */
+
+renderShop();
+
+</script>
+
+</body>
+
 </html>
