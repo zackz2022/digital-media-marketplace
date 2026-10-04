@@ -1,58 +1,60 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const searchInput = document.getElementById('resource-search');
-  const filterButtons = document.querySelectorAll('.filter-chip');
-  const resourceCards = document.querySelectorAll('.resource-card');
-  const noResults = document.getElementById('no-results');
-  const categoryTitle = document.getElementById('category-title');
+document.addEventListener("DOMContentLoaded", () => {
 
-  if (!searchInput || resourceCards.length === 0) return;
+  /* ==========================================
+     SCRUFFY BUTT DESIGN CATALOG FILTER
+  ========================================== */
 
-  let activeCategory = 'all';
-  const params = new URLSearchParams(window.location.search);
-  const categoryParam = params.get('category');
+  const filterButtons =
+    document.querySelectorAll(".filter-btn");
 
-  if (categoryParam && [...filterButtons].some((button) => button.dataset.category === categoryParam)) {
-    activeCategory = categoryParam;
+  const productCards =
+    document.querySelectorAll(".product-card");
+
+
+  if (
+    filterButtons.length > 0 &&
+    productCards.length > 0
+  ) {
+
+    filterButtons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        const selectedCategory =
+          button.dataset.filter || "all";
+
+
+        /* Update active button */
+
+        filterButtons.forEach(btn => {
+          btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+
+        /* Filter design cards */
+
+        productCards.forEach(card => {
+
+          const cardCategory =
+            card.dataset.category;
+
+
+          const shouldShow =
+            selectedCategory === "all" ||
+            cardCategory === selectedCategory;
+
+
+          card.style.display =
+            shouldShow ? "" : "none";
+
+        });
+
+      });
+
+    });
+
   }
 
-  const updateCards = () => {
-    const searchValue = searchInput.value.trim().toLowerCase();
-    let visibleCount = 0;
-
-    resourceCards.forEach((card) => {
-      const title = card.querySelector('.resource-title')?.textContent.toLowerCase() || '';
-      const category = card.dataset.category || 'all';
-      const matchesCategory = activeCategory === 'all' || category === activeCategory;
-      const matchesSearch = !searchValue || title.includes(searchValue) || category.includes(searchValue);
-      const isVisible = matchesCategory && matchesSearch;
-      card.classList.toggle('hidden', !isVisible);
-      if (isVisible) visibleCount += 1;
-    });
-
-    if (noResults) {
-      const hasResults = visibleCount > 0;
-      noResults.classList.toggle('hidden', hasResults);
-    }
-
-    if (categoryTitle) {
-      const selectedButton = document.querySelector(`.filter-chip[data-category="${activeCategory}"]`);
-      const fallbackText = activeCategory === 'all' ? 'All resources' : selectedButton?.textContent || 'Resources';
-      categoryTitle.textContent = fallbackText;
-    }
-  };
-
-  searchInput.addEventListener('input', updateCards);
-
-  filterButtons.forEach((button) => {
-    const isSelected = (button.dataset.category || 'all') === activeCategory;
-    button.classList.toggle('active', isSelected);
-
-    button.addEventListener('click', () => {
-      activeCategory = button.dataset.category || 'all';
-      filterButtons.forEach((btn) => btn.classList.toggle('active', btn === button));
-      updateCards();
-    });
-  });
-
-  updateCards();
 });
