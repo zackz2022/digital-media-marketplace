@@ -1153,4 +1153,25 @@ img { max-width: 100%; display: block; }
   .brand-name { font-size: 0.95rem; }
   .brand-logo { width: 3rem; height: 3rem; }
   .resource-search { width: 100%; }
+  .contact-info {
+  line-height: 1.7;
+}
+
+.contact-info h4 {
+  color: #ff5aaa;
+}
+
+.contact-info p {
+  color: #f5eaf0;
+}
+
+.contact-info a {
+  color: #ffd36b;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  color: #ff5aaa;
+  text-decoration: underline;
 }
