@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Scruffy Butt Digital Designs is a creative digital design business bringing personality, imagination, and a little attitude." />
+    <title>Scruffy Butt Digital Designs | Creative Digital Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="Scruffy Butt Digital Designs home">
+          <span class="brand-logo">
+            <img src="logo.png" alt="Scruffy Butt Digital Designs logo" />
+          </span>
+          <span class="brand-name">Scruffy Butt Designs</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#catalog">Catalog</a>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn btn-ghost">Log in</button>
+          <button class="btn btn-primary">Start selling</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="slogan-banner">
+      <p class="slogan-text">Put some scruff on your stuff</p>
+    </div>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Creative Digital Design with Attitude</span>
+            <h1>Scruffy Butt Digital Designs</h1>
+            <p>
+              Bringing personality, imagination, and a little attitude to every digital design project.
+              Premium creative assets, templates, and design services that make your brand stand out.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#catalog" class="btn btn-primary large">Browse marketplace</a>
+              <a href="#pricing" class="btn btn-secondary large">Commission Work</a>
+            </div>
+
+            <ul class="trust-list" aria-label="Marketplace trust points">
+              <li>5k+ designs created</li>
+              <li>4.9/5 customer rating</li>
+              <li>Global clientele</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Marketplace preview">
+            <div class="dashboard-card main-card">
+              <div class="card-header">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+
+              <div class="stat-row">
+                <div>
+                  <p>Projects Completed</p>
+                  <strong>5,240</strong>
+                </div>
+                <div class="trend up">+18.2%</div>
+              </div>
+
+              <div class="mini-grid">
+                <div class="mini-card accent">
+                  <span>Top Product</span>
+                  <strong>Logo Design Pack</strong>
+                </div>
+                <div class="mini-card">
+                  <span>Happy Clients</span>
+                  <strong>2.1k</strong>
+                </div>
+                <div class="mini-card wide">
+                  <span>Specialty</span>
+                  <strong>Branding & Illustration</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-one">
+              <span>New</span>
+              <strong>Mascot Design Kit</strong>
+            </div>
+
+            <div class="floating-badge badge-two">
+              <span>Popular</span>
+              <strong>⭐ 5 Stars</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="partners">
+        <div class="container partner-row" aria-label="Partner brands">
+          <span>Creative Studio</span>
+          <span>Design Hub</span>
+          <span>Artistry Co</span>
+          <span>Digital Boutique</span>
+          <span>Brand Lab</span>
+        </div>
+      </section>
+
+      <section id="catalog" class="catalog section-spacing">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Explore our designs</span>
+            <h2>Unique digital designs with personality and attitude.</h2>
+          </div>
+
+          <div class="filter-bar" aria-label="Product categories">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="templates">Templates</button>
+            <button class="filter-btn" data-filter="media">Illustrations</button>
+            <button class="filter-btn" data-filter="marketing">Branding</button>
+            <button class="filter-btn" data-filter="sites">Web Design</button>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card" data-category="templates" onclick="window.location.href='product-1.html'">
+              <div class="product-thumb thumb-one"></div>
+              <div class="product-body">
+                <div class="meta-row">
+                  <span class="tag">Templates</span>
+                  <span class="rating">⭐⭐⭐⭐⭐ 4.9</span>
+                </div>
+                <h3>Logo Design Pack</h3>
+                <p>Premium logo templates with editable files for personal and commercial use.</p>
+                <div class="product-footer">
+                  <strong>$49</strong>
+                  <button class="btn btn-small btn-primary" onclick="event.stopPropagation(); window.location.href='product-1.html'">Buy now</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="media" onclick="window.location.href='product-2.html'">
+              <div class="product-thumb thumb-two"></div>
+              <div class="product-body">
+                <div class="meta-row">
+                  <span class="tag">Illustrations</span>
+                  <span class="rating">⭐⭐⭐⭐⭐ 4.8</span>
+                </div>
+                <h3>Character Illustration Bundle</h3>
+                <p>Quirky and colorful character illustrations perfect for branding and storytelling.</p>
+                <div class="product-footer">
+                  <strong>$36</strong>
+                  <button class="btn btn-small btn-primary" onclick="event.stopPropagation(); window.location.href='product-2.html'">Buy now</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="marketing" onclick="window.location.href='product-3.html'">
+              <div class="product-thumb thumb-three"></div>
+              <div class="product-body">
+                <div class="meta-row">
+                  <span class="tag">Branding</span>
+                  <span class="rating">⭐⭐⭐⭐⭐ 5.0</span>
+                </div>
+                <h3>Complete Brand Identity Kit</h3>
+                <p>Full branding package including logo, colors, fonts, and brand guidelines.</p>
+                <div class="product-footer">
+                  <strong>$59</strong>
+                  <button class="btn btn-small btn-primary" onclick="event.stopPropagation(); window.location.href='product-3.html'">Buy now</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="sites" onclick="window.location.href='product-4.html'">
+              <div class="product-thumb thumb-four"></div>
+              <div class="product-body">
+                <div class="meta-row">
+                  <span class="tag">Web Design</span>
+                  <span class="rating">⭐⭐⭐⭐⭐ 4.9</span>
+                </div>
+                <h3>Custom Website Design</h3>
+                <p>Eye-catching website designs that convert visitors and showcase personality.</p>
+                <div class="product-footer">
+                  <strong>$89</strong>
+                  <button class="btn btn-small btn-primary" onclick="event.stopPropagation(); window.location.href='product-4.html'">Buy now</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="templates" onclick="window.location.href='product-1.html'">
+              <div class="product-thumb thumb-five"></div>
+              <div class="product-body">
+                <div class="meta-row">
+                  <span class="tag">Templates</span>
+                  <span class="rating">⭐⭐⭐⭐⭐ 4.7</span>
+                </div>
+                <h3>Social Media Templates</h3>
+                <p>Trendy social media post templates that bring your brand voice to life.</p>
+                <div class="product-footer">
+                  <strong>$42</strong>
+                  <button class="btn btn-small btn-primary" onclick="event.stopPropagation(); window.location.href='product-1.html'">Buy now</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-category="marketing" onclick="window.location.href='product-3.html'">
+              <div class="product-thumb thumb-six"></div>
+              <div class="product-body">
+                <div class="meta-row">
+                  <span class="tag">Branding</span>
+                  <span class="rating">⭐⭐⭐⭐⭐ 4.9</span>
+                </div>
+                <h3>Packaging Design Templates</h3>
+                <p>Creative packaging designs that make your products memorable and shareable.</p>
+                <div class="product-footer">
+                  <strong>$27</strong>
+                  <button class="btn btn-small btn-primary" onclick="event.stopPropagation(); window.location.href='product-3.html'">Buy now</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features section-spacing">
+        <div class="container">
+          <div class="section-heading narrow">
+            <span class="eyebrow">Why choose Scruffy Butt?</span>
+            <h2>Design with personality and creative flair.</h2>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">✨</div>
+              <h3>Creative Vision</h3>
+              <p>Designs that stand out with unique character and memorable style.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🎨</div>
+              <h3>Fully Customizable</h3>
+              <p>All designs come with editable files for your personal touch.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">⚡</div>
+              <h3>Quick Turnaround</h3>
+              <p>Fast delivery on custom commissions without sacrificing quality.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">💪</div>
+              <h3>Quality Guaranteed</h3>
+              <p>Professional designs that make your brand look amazing and bold.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="promo-strip">
+        <div class="container promo-inner">
+          <div>
+            <span class="eyebrow light">Ready for amazing design?</span>
+            <h2>Let's bring your vision to life with creative designs.</h2>
+          </div>
+          <a href="#catalog" class="btn btn-light">Explore designs</a>
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing section-spacing">
+        <div class="container">
+          <div class="section-heading narrow">
+            <span class="eyebrow">Design Services</span>
+            <h2>Choose the package that fits your needs.</h2>
+          </div>
+
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <span class="plan">Starter Pack</span>
+              <h3>$99<span>/mo</span></h3>
+              <ul>
+                <li>1 custom design per month</li>
+                <li>Unlimited revisions</li>
+                <li>Quick turnaround</li>
+                <li>Email support</li>
+              </ul>
+              <button class="btn btn-secondary full">Get started</button>
+            </div>
+
+            <div class="pricing-card featured-plan">
+              <span class="plan">Full Branding</span>
+              <h3>$299<span>/mo</span></h3>
+              <ul>
+                <li>Complete brand identity</li>
+                <li>Logo + brand guidelines</li>
+                <li>Social media templates</li>
+                <li>Priority support</li>
+              </ul>
+              <button class="btn btn-primary full">Most popular</button>
+            </div>
+
+            <div class="pricing-card">
+              <span class="plan">Premium Package</span>
+              <h3>$599<span>/mo</span></h3>
+              <ul>
+                <li>Unlimited custom designs</li>
+                <li>Website design included</li>
+                <li>Brand strategy consultation</li>
+                <li>Dedicated designer</li>
+              </ul>
+              <button class="btn btn-secondary full">Talk to us</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" class="reviews section-spacing">
+        <div class="container">
+          <div class="section-heading narrow">
+            <span class="eyebrow">Client love</span>
+            <h2>What our happy clients say about us.</h2>
+          </div>
+
+          <div class="review-grid">
+            <blockquote class="review-card">
+              “Scruffy Butt Designs brought our brand vision to life with personality and flair. Absolutely love the work!”
+              <footer>
+                <strong>Jessica R.</strong>
+                <span>Small Business Owner</span>
+              </footer>
+            </blockquote>
+
+            <blockquote class="review-card">
+              “Best design investment we made. The team understood our vibe and nailed it on the first round.”
+              <footer>
+                <strong>Alex T.</strong>
+                <span>Creative Director</span>
+              </footer>
+            </blockquote>
+
+            <blockquote class="review-card">
+              “Fresh, creative, and full of personality. Scruffy Butt Designs is the real deal!”
+              <footer>
+                <strong>Sarah M.</strong>
+                <span>Entrepreneur</span>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="index.html" class="brand" aria-label="Scruffy Butt Digital Designs home">
+            <span class="brand-logo brand-logo-small">
+              <img src="logo.png" alt="Scruffy Butt Digital Designs logo" />
+            </span>
+            <span class="brand-name">Scruffy Butt Designs</span>
+          </a>
+          <p>Creative digital design bringing personality, imagination, and attitude.</p>
+        </div>
+
+        <div>
+          <h4>Designs</h4>
+          <ul>
+            <li><a href="#catalog">Logo Designs</a></li>
+            <li><a href="#catalog">Illustrations</a></li>
+            <li><a href="#catalog">Branding</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#features">About Us</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@scruffybutt.designs">hello@scruffybutt.designs</a></li>
+            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li>Creative Studio</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© 2026 Scruffy Butt Digital Designs</span>
+        <span>Privacy • Terms • Support</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
